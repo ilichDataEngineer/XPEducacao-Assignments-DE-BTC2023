@@ -1,5 +1,3 @@
-# Just a test change
-
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as f
 from pyspark.sql.functions import mean, max, min, count
@@ -106,7 +104,7 @@ rais = (
     rais
     .coalesce(50)
     .write.mode('overwrite')
-    .partitionBy('ano', 'uf')
+    .partitionBy('uf')
     .format('parquet')
     .save('s3://dl-ib-igti-edc-des-mod1-tf/staging/')
 )
