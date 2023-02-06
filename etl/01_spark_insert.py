@@ -104,7 +104,7 @@ rais = (
     rais
     .coalesce(50)
     .write.mode('overwrite')
-    .partitionBy('ano', 'uf')
+    .partitionBy('uf')
     .format('parquet')
     .save('s3://dl-ib-igti-edc-des-mod1-tf/staging/')
 )
