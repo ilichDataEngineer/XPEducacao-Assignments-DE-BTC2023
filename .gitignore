@@ -1,0 +1,5 @@
+*.txt
+*.7z
+.terraform/
+.terraform.lock.hcl
+.listing
